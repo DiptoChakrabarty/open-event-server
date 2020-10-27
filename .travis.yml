@@ -40,3 +40,4 @@ branches:
   only:
     - master
     - development
+    - develop
