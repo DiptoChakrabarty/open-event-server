@@ -37,9 +37,9 @@ ACTIVITIES = {
 class Activity(db.Model):
     __tablename__ = 'activities'
     id = db.Column(db.Integer, primary_key=True)
-    actor = db.Column(db.String)  # user email + id
+    actor = db.Column(db.String,nullable=True)  # user email + id
     time = db.Column(db.DateTime(timezone=True), default=func.now())
-    action = db.Column(db.String)
+    action = db.Column(db.String,nullable=True)
 
     def __repr__(self):
         return '<Activity by %s>' % self.actor
